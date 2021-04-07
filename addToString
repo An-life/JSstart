@@ -1,0 +1,4 @@
+var animals=["manky","cat","dog","walle"];
+for(var i=0;i<4;i++){
+animals[i]=(animals[i]+"-great animal!");
+console.log(animals);}
