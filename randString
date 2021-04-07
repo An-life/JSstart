@@ -1,0 +1,6 @@
+var alf="qwertyuioplkjhgfdsazxcvbnm";
+var rand="";
+while(rand.length<10){
+var ind=Math.floor(Math.random()*alf.length);
+ rand=rand+alf[ind];
+console.log(rand);}
