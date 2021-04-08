@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Виселица</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1> Виселица!</h1>
+    <script>
+        var words = ["конь", "солнце", "нога", "липа", "лапша", "лупа", "дождь", "каштан", "кукушка", "фильм"];
+        var word = words[Math.floor(Math.random() * words.length)];
+        var answerArrey = [];
+        for (var i = 0; i < word.length; i++) {
+            answerArrey[i] = "_";
+        }
+        var remainingLeters = word.length;
+        var try1 = 0;
+        while (remainingLeters > 0 && try1 < 7 && answerArrey[i] !== "_") {
+            alert(answerArrey.join(" "));
+            var guess = prompt("Угадай букву или нажми отмена для выхода из игры.");
+            var tio = guess.toLowerCase();
+            if (tio === null) {
+                break;
+            } else if (tio.length !== 1) {
+                alert("Пожалуйста введи одну букву!");
+            } else {
+                for (var j = 0; j < word.length; j++) {
+                    if (word[j] === tio) {
+                        answerArrey[j] = tio;
+                        remainingLeters--;
+                    }
+                }
+            }
+            try1++;
+        }
+        alert(answerArrey.join(" "));
+        alert("Отлично, было загадано слово " + word);
+    </script>
+</body>
+
+</html>
